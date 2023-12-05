@@ -1,0 +1,11 @@
+Name:
+  check_missing: false
+  data_type: object
+
+Age:
+  check_missing: true
+  data_type: float64
+
+Score:
+  check_missing: false
+  data_type: float64
