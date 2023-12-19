@@ -19,7 +19,7 @@ def medium_strategy(game):
             game.board.remove_disc(col)
 
     # Check for a blocking move against the opponent
-    opponent = game.get_opponent(game.current_player)
+    opponent = game.get_opponent()
     for col in range(game.board.columns):
         if game.board.is_valid_move(col):
             game.board.add_disc(opponent, col)
