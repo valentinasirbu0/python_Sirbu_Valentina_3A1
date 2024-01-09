@@ -75,25 +75,21 @@ class Board:
                 return
 
     def found_4_in_a_row(self, target):
-        # Check horizontally
         for row in self.matrix:
             for i in range(self.columns - 3):
                 if all(element == target for element in row[i:i + 4]):
                     return True
 
-        # Check vertically
         for j in range(self.columns):
             for i in range(self.rows - 3):
                 if all(self.matrix[i + k][j] == target for k in range(4)):
                     return True
 
-        # Check diagonally (from top-left to bottom-right)
         for i in range(self.rows - 3):
             for j in range(self.columns - 3):
                 if all(self.matrix[i + k][j + k] == target for k in range(4)):
                     return True
 
-        # Check diagonally (from top-right to bottom-left)
         for i in range(self.rows - 3):
             for j in range(3, self.columns):
                 if all(self.matrix[i + k][j - k] == target for k in range(4)):

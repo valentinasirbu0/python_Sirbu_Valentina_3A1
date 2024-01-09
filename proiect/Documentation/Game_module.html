@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module Game_module</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">Game_module</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cvalea%5Cdesktop%5Cpy%5Cproiect%5Cdocumentation%5Cgame_module.py">c:\users\valea\desktop\py\proiect\documentation\game_module.py</a></td></tr></table>
+    <p><span class="code"><a href="#Game">Game</a>&nbsp;Module<br>
+===============<br>
+&nbsp;<br>
+This&nbsp;module&nbsp;provides&nbsp;a&nbsp;function&nbsp;to&nbsp;initialize&nbsp;a&nbsp;game&nbsp;of&nbsp;4InARow.</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="pygame.html">pygame</a><br>
+</td><td class="multicolumn"><a href="random.html">random</a><br>
+</td><td class="multicolumn"><a href="sys.html">sys</a><br>
+</td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="builtins.html#object">builtins.object</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="Game_module.html#Board">Board</a>
+</dt><dt class="heading-text"><a href="Game_module.html#FourInARowWindow">FourInARowWindow</a>
+</dt><dt class="heading-text"><a href="Game_module.html#Game">Game</a>
+</dt><dt class="heading-text"><a href="Game_module.html#Player">Player</a>
+</dt></dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Board">class <strong>Board</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Board">Board</a>(rows,&nbsp;columns)<br>
+&nbsp;<br>
+<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="Board-__getitem__"><strong>__getitem__</strong></a>(self, index)</dt><dd><span class="code">Returnează&nbsp;rândul&nbsp;specificat&nbsp;din&nbsp;matricea&nbsp;tablei&nbsp;de&nbsp;joc.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;index&nbsp;(int):&nbsp;Indexul&nbsp;rândului.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;list:&nbsp;Rândul&nbsp;specificat&nbsp;din&nbsp;matricea&nbsp;tablei&nbsp;de&nbsp;joc.</span></dd></dl>
+
+<dl><dt><a name="Board-__init__"><strong>__init__</strong></a>(self, rows, columns)</dt><dd><span class="code">Inițializează&nbsp;tabla&nbsp;de&nbsp;joc&nbsp;cu&nbsp;un&nbsp;număr&nbsp;specific&nbsp;de&nbsp;rânduri&nbsp;și&nbsp;coloane.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;rows&nbsp;(int):&nbsp;Numărul&nbsp;de&nbsp;rânduri&nbsp;ale&nbsp;tablei&nbsp;de&nbsp;joc.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;columns&nbsp;(int):&nbsp;Numărul&nbsp;de&nbsp;coloane&nbsp;ale&nbsp;tablei&nbsp;de&nbsp;joc.</span></dd></dl>
+
+<dl><dt><a name="Board-add_disc"><strong>add_disc</strong></a>(self, player, col_to_put_disc)</dt><dd><span class="code">Adaugă&nbsp;discul&nbsp;unui&nbsp;jucător&nbsp;într-o&nbsp;anumită&nbsp;coloană,&nbsp;actualizând&nbsp;tabla&nbsp;de&nbsp;joc.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;player&nbsp;(<a href="#Player">Player</a>):&nbsp;Jucătorul&nbsp;care&nbsp;adaugă&nbsp;discul.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;col_to_put_disc&nbsp;(int):&nbsp;Indexul&nbsp;coloanei&nbsp;în&nbsp;care&nbsp;se&nbsp;adaugă&nbsp;discul.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;True&nbsp;dacă&nbsp;discul&nbsp;a&nbsp;fost&nbsp;adăugat&nbsp;cu&nbsp;succes,&nbsp;False&nbsp;altfel.</span></dd></dl>
+
+<dl><dt><a name="Board-found_4_in_a_row"><strong>found_4_in_a_row</strong></a>(self, target)</dt><dd><span class="code">Verifică&nbsp;dacă&nbsp;există&nbsp;4&nbsp;piese&nbsp;de&nbsp;culoarea&nbsp;specificată&nbsp;aliniate&nbsp;în&nbsp;oricare&nbsp;direcție.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;target&nbsp;(tuple):&nbsp;Culoarea&nbsp;pieselor&nbsp;pe&nbsp;care&nbsp;se&nbsp;realizează&nbsp;verificarea.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;True&nbsp;dacă&nbsp;există&nbsp;o&nbsp;aliniere&nbsp;de&nbsp;4&nbsp;piese,&nbsp;False&nbsp;altfel.</span></dd></dl>
+
+<dl><dt><a name="Board-is_valid_move"><strong>is_valid_move</strong></a>(self, col_to_put_disc)</dt><dd><span class="code">Verifică&nbsp;dacă&nbsp;o&nbsp;mutare&nbsp;într-o&nbsp;anumită&nbsp;coloană&nbsp;este&nbsp;validă.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;col_to_put_disc&nbsp;(int):&nbsp;Indexul&nbsp;coloanei&nbsp;în&nbsp;care&nbsp;se&nbsp;plasează&nbsp;un&nbsp;disc.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;True&nbsp;dacă&nbsp;mutarea&nbsp;este&nbsp;validă,&nbsp;False&nbsp;altfel.</span></dd></dl>
+
+<dl><dt><a name="Board-print_board"><strong>print_board</strong></a>(self)</dt><dd><span class="code">Afișează&nbsp;conținutul&nbsp;tablei&nbsp;de&nbsp;joc,&nbsp;util&nbsp;în&nbsp;scopuri&nbsp;de&nbsp;debugare.</span></dd></dl>
+
+<dl><dt><a name="Board-remove_disc"><strong>remove_disc</strong></a>(self, col)</dt><dd><span class="code">Elimină&nbsp;discul&nbsp;dintr-o&nbsp;anumită&nbsp;coloană,&nbsp;actualizând&nbsp;tabla&nbsp;de&nbsp;joc.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;col&nbsp;(int):&nbsp;Indexul&nbsp;coloanei&nbsp;din&nbsp;care&nbsp;va&nbsp;fi&nbsp;eliminat&nbsp;discul.</span></dd></dl>
+
+<dl><dt><a name="Board-reset"><strong>reset</strong></a>(self)</dt><dd><span class="code">Resetează&nbsp;tabla&nbsp;de&nbsp;joc,&nbsp;umplând-o&nbsp;cu&nbsp;culoarea&nbsp;inițială&nbsp;specificată.</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="FourInARowWindow">class <strong>FourInARowWindow</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#FourInARowWindow">FourInARowWindow</a>(game)<br>
+&nbsp;<br>
+<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="FourInARowWindow-__init__"><strong>__init__</strong></a>(self, game)</dt><dd><span class="code">Inițializează&nbsp;fereastra&nbsp;jocului&nbsp;și&nbsp;începe&nbsp;jocul&nbsp;sau&nbsp;solicită&nbsp;alegerea&nbsp;nivelului&nbsp;de&nbsp;dificultate.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;game&nbsp;(<a href="#Game">Game</a>):&nbsp;Obiectul&nbsp;jocului.</span></dd></dl>
+
+<dl><dt><a name="FourInARowWindow-display_congratulations"><strong>display_congratulations</strong></a>(self)</dt><dd><span class="code">Afișează&nbsp;un&nbsp;mesaj&nbsp;de&nbsp;felicitare&nbsp;pentru&nbsp;jucătorul&nbsp;câștigător.</span></dd></dl>
+
+<dl><dt><a name="FourInARowWindow-draw_button_text"><strong>draw_button_text</strong></a>(self, text, button)</dt><dd><span class="code">Desenează&nbsp;textul&nbsp;pe&nbsp;buton&nbsp;în&nbsp;centrul&nbsp;acestuia.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;text&nbsp;(str):&nbsp;Textul&nbsp;de&nbsp;desenat&nbsp;pe&nbsp;buton.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;button&nbsp;(pygame.Rect):&nbsp;Dreptunghiul&nbsp;care&nbsp;reprezintă&nbsp;butonul.</span></dd></dl>
+
+<dl><dt><a name="FourInARowWindow-draw_grid"><strong>draw_grid</strong></a>(self)</dt><dd><span class="code">Desenează&nbsp;tabla&nbsp;de&nbsp;joc&nbsp;cu&nbsp;cercuri&nbsp;colorate&nbsp;corespunzător&nbsp;pieselor&nbsp;plasate.</span></dd></dl>
+
+<dl><dt><a name="FourInARowWindow-make_a_move"><strong>make_a_move</strong></a>(self)</dt><dd><span class="code">Efectuează&nbsp;o&nbsp;mutare&nbsp;în&nbsp;funcție&nbsp;de&nbsp;jucătorul&nbsp;curent&nbsp;(uman&nbsp;sau&nbsp;AI).</span></dd></dl>
+
+<dl><dt><a name="FourInARowWindow-return_to_level_selection"><strong>return_to_level_selection</strong></a>(self)</dt><dd><span class="code">Resetează&nbsp;jocul&nbsp;și&nbsp;revine&nbsp;la&nbsp;ecranul&nbsp;de&nbsp;selecție&nbsp;a&nbsp;nivelului&nbsp;de&nbsp;dificultate.</span></dd></dl>
+
+<dl><dt><a name="FourInARowWindow-run_game"><strong>run_game</strong></a>(self)</dt><dd><span class="code">Desfășoară&nbsp;jocul&nbsp;până&nbsp;când&nbsp;un&nbsp;jucător&nbsp;câștigă&nbsp;sau&nbsp;se&nbsp;închide&nbsp;fereastra.</span></dd></dl>
+
+<dl><dt><a name="FourInARowWindow-select_level"><strong>select_level</strong></a>(self)</dt><dd><span class="code">Afișează&nbsp;ecranul&nbsp;pentru&nbsp;selectarea&nbsp;nivelului&nbsp;de&nbsp;dificultate&nbsp;și&nbsp;așteaptă&nbsp;până&nbsp;când&nbsp;un&nbsp;nivel&nbsp;este&nbsp;selectat.</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Game">class <strong>Game</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Game">Game</a>(rows,&nbsp;columns,&nbsp;current_player,&nbsp;player1,&nbsp;player2)<br>
+&nbsp;<br>
+<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="Game-__init__"><strong>__init__</strong></a>(self, rows, columns, current_player, player1, player2)</dt><dd><span class="code">Inițializează&nbsp;un&nbsp;joc&nbsp;nou.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;rows&nbsp;(int):&nbsp;Numărul&nbsp;de&nbsp;rânduri&nbsp;ale&nbsp;tablei&nbsp;de&nbsp;joc.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;columns&nbsp;(int):&nbsp;Numărul&nbsp;de&nbsp;coloane&nbsp;ale&nbsp;tablei&nbsp;de&nbsp;joc.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;current_player&nbsp;(<a href="#Player">Player</a>):&nbsp;Jucătorul&nbsp;curent&nbsp;care&nbsp;își&nbsp;va&nbsp;începe&nbsp;mutarea.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;player1&nbsp;(<a href="#Player">Player</a>):&nbsp;Jucătorul&nbsp;1&nbsp;cu&nbsp;atribute&nbsp;precum&nbsp;culoare&nbsp;și&nbsp;rol.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;player2&nbsp;(<a href="#Player">Player</a>):&nbsp;Jucătorul&nbsp;2&nbsp;cu&nbsp;atribute&nbsp;precum&nbsp;culoare&nbsp;și&nbsp;rol.</span></dd></dl>
+
+<dl><dt><a name="Game-change_current_player"><strong>change_current_player</strong></a>(self)</dt><dd><span class="code">Schimbă&nbsp;jucătorul&nbsp;curent&nbsp;cu&nbsp;celălalt&nbsp;jucător.</span></dd></dl>
+
+<dl><dt><a name="Game-get_opponent"><strong>get_opponent</strong></a>(self)</dt><dd><span class="code">Returnează&nbsp;adversarul&nbsp;jucătorului&nbsp;curent.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#Player">Player</a>:&nbsp;Jucătorul&nbsp;adversar.</span></dd></dl>
+
+<dl><dt><a name="Game-no_more_moves"><strong>no_more_moves</strong></a>(self)</dt><dd><span class="code">Verifică&nbsp;dacă&nbsp;nu&nbsp;mai&nbsp;există&nbsp;mutări&nbsp;valide&nbsp;disponibile&nbsp;pe&nbsp;tablă.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;True&nbsp;dacă&nbsp;nu&nbsp;mai&nbsp;există&nbsp;mutări,&nbsp;False&nbsp;altfel.</span></dd></dl>
+
+<dl><dt><a name="Game-reset"><strong>reset</strong></a>(self)</dt><dd><span class="code">Resetează&nbsp;starea&nbsp;jocului&nbsp;la&nbsp;cea&nbsp;inițială.</span></dd></dl>
+
+<dl><dt><a name="Game-set_level"><strong>set_level</strong></a>(self, level)</dt><dd><span class="code">Setează&nbsp;nivelul&nbsp;de&nbsp;dificultate&nbsp;al&nbsp;jocului.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;level&nbsp;(str):&nbsp;Nivelul&nbsp;de&nbsp;dificultate&nbsp;ales:&nbsp;"easy",&nbsp;"medium",&nbsp;sau&nbsp;"hard".</span></dd></dl>
+
+<dl><dt><a name="Game-winner_found"><strong>winner_found</strong></a>(self)</dt><dd><span class="code">Verifică&nbsp;dacă&nbsp;s-a&nbsp;îndeplinit&nbsp;o&nbsp;condiție&nbsp;de&nbsp;câștig&nbsp;și&nbsp;actualizează&nbsp;câștigătorul.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;True&nbsp;dacă&nbsp;există&nbsp;un&nbsp;câștigător,&nbsp;False&nbsp;altfel.</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Player">class <strong>Player</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Player">Player</a>(color,&nbsp;role)<br>
+&nbsp;<br>
+<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="Player-__init__"><strong>__init__</strong></a>(self, color, role)</dt><dd><span class="code">Inițializează&nbsp;un&nbsp;obiect&nbsp;<a href="#Player">Player</a>&nbsp;cu&nbsp;o&nbsp;culoare&nbsp;specifică&nbsp;și&nbsp;un&nbsp;rol.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;color&nbsp;(tuple):&nbsp;Tripletă&nbsp;RGB&nbsp;reprezentând&nbsp;culoarea&nbsp;jucătorului.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;role&nbsp;(str):&nbsp;Rolul&nbsp;jucătorului,&nbsp;cum&nbsp;ar&nbsp;fi&nbsp;"human"&nbsp;sau&nbsp;"ai".</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-can_create_two_in_a_row"><strong>can_create_two_in_a_row</strong></a>(game)</dt><dd><span class="code">Verifică&nbsp;dacă&nbsp;jucătorul&nbsp;curent&nbsp;are&nbsp;șansa&nbsp;de&nbsp;a&nbsp;crea&nbsp;două&nbsp;în&nbsp;linie&nbsp;și&nbsp;a&nbsp;bloca&nbsp;adversarul.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;game&nbsp;(<a href="#Game">Game</a>):&nbsp;Obiectul&nbsp;jocului.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;True&nbsp;dacă&nbsp;jucătorul&nbsp;curent&nbsp;poate&nbsp;crea&nbsp;două&nbsp;în&nbsp;linie,&nbsp;False&nbsp;altfel.</span></dd></dl>
+ <dl><dt><a name="-easy_strategy"><strong>easy_strategy</strong></a>(game)</dt><dd><span class="code">Strategie&nbsp;ușoară&nbsp;pentru&nbsp;AI,&nbsp;care&nbsp;plasează&nbsp;un&nbsp;disc&nbsp;într-o&nbsp;coloană&nbsp;aleatoare&nbsp;disponibilă.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;game&nbsp;(<a href="#Game">Game</a>):&nbsp;Obiectul&nbsp;jocului.</span></dd></dl>
+ <dl><dt><a name="-find_strategic_move_hard"><strong>find_strategic_move_hard</strong></a>(game)</dt><dd><span class="code">Găsește&nbsp;o&nbsp;mișcare&nbsp;strategică&nbsp;dificilă,&nbsp;prioritară&nbsp;fiind&nbsp;coloana&nbsp;din&nbsp;centru&nbsp;sau&nbsp;prima&nbsp;disponibilă.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;game&nbsp;(<a href="#Game">Game</a>):&nbsp;Obiectul&nbsp;jocului.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;or&nbsp;None:&nbsp;Indexul&nbsp;coloanei&nbsp;pentru&nbsp;mișcarea&nbsp;strategică&nbsp;sau&nbsp;None&nbsp;dacă&nbsp;nu&nbsp;există&nbsp;mutări&nbsp;disponibile.</span></dd></dl>
+ <dl><dt><a name="-find_strategic_move_medium"><strong>find_strategic_move_medium</strong></a>(game)</dt><dd><span class="code">Găsește&nbsp;o&nbsp;mișcare&nbsp;strategică&nbsp;de&nbsp;dificultate&nbsp;medie,&nbsp;prioritară&nbsp;fiind&nbsp;coloana&nbsp;din&nbsp;centru&nbsp;sau&nbsp;prima&nbsp;disponibilă.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;game&nbsp;(<a href="#Game">Game</a>):&nbsp;Obiectul&nbsp;jocului.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;or&nbsp;None:&nbsp;Indexul&nbsp;coloanei&nbsp;pentru&nbsp;mișcarea&nbsp;strategică&nbsp;sau&nbsp;None&nbsp;dacă&nbsp;nu&nbsp;există&nbsp;mutări&nbsp;disponibile.</span></dd></dl>
+ <dl><dt><a name="-hard_strategy"><strong>hard_strategy</strong></a>(game)</dt><dd><span class="code">Strategie&nbsp;dificilă&nbsp;pentru&nbsp;AI,&nbsp;care&nbsp;urmărește&nbsp;un&nbsp;șir&nbsp;de&nbsp;mișcări&nbsp;câștigătoare&nbsp;sau&nbsp;de&nbsp;blocare,<br>
+iar&nbsp;în&nbsp;absența&nbsp;acestora,&nbsp;face&nbsp;o&nbsp;mișcare&nbsp;strategică.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;game&nbsp;(<a href="#Game">Game</a>):&nbsp;Obiectul&nbsp;jocului.</span></dd></dl>
+ <dl><dt><a name="-initialize_game"><strong>initialize_game</strong></a>(role2, rows, columns, first_player='human')</dt><dd><span class="code">4InARow&nbsp;este&nbsp;un&nbsp;joc&nbsp;cu&nbsp;doi&nbsp;jucători,&nbsp;jucat&nbsp;fie&nbsp;între&nbsp;oameni,&nbsp;fie&nbsp;între&nbsp;un&nbsp;om&nbsp;și&nbsp;un&nbsp;adversar&nbsp;AI,&nbsp;având&nbsp;trei&nbsp;niveluri&nbsp;de&nbsp;dificultate.<br>
+Jucătorilor&nbsp;li&nbsp;se&nbsp;atribuie&nbsp;culori&nbsp;specifice,&nbsp;iar&nbsp;unul&nbsp;dintre&nbsp;ei&nbsp;este&nbsp;desemnat&nbsp;ca&nbsp;"uman".<br>
+Funcția&nbsp;creează&nbsp;apoi&nbsp;un&nbsp;obiect&nbsp;"Joc"&nbsp;cu&nbsp;rânduri&nbsp;și&nbsp;coloane&nbsp;specificate,&nbsp;utilizând&nbsp;cei&nbsp;doi&nbsp;jucători,&nbsp;și&nbsp;returnează&nbsp;obiectul&nbsp;de&nbsp;joc&nbsp;inițializat.</span></dd></dl>
+ <dl><dt><a name="-medium_strategy"><strong>medium_strategy</strong></a>(game)</dt><dd><span class="code">Strategie&nbsp;de&nbsp;dificultate&nbsp;medie&nbsp;pentru&nbsp;AI,&nbsp;care&nbsp;urmărește&nbsp;un&nbsp;șir&nbsp;de&nbsp;mișcări&nbsp;câștigătoare&nbsp;sau&nbsp;de&nbsp;blocare,<br>
+iar&nbsp;în&nbsp;absența&nbsp;acestora,&nbsp;face&nbsp;o&nbsp;mișcare&nbsp;strategică.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;game&nbsp;(<a href="#Game">Game</a>):&nbsp;Obiectul&nbsp;jocului.</span></dd></dl>
+</td></tr></table>
+</body></html>
