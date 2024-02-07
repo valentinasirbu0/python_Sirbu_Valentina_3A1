@@ -1,0 +1,54 @@
+2. Creati la consola o histograma text pentru extensiile fisierelor din folderul:
+   - c:\windows\system32 (pentru cei cu Windows)
+   - /var                (pentru cei cu Linux/MacOS)
+   Vom lua in calcul doar extensiile cu frecventa mai mare de 10, si doar acele extensii formate din exact 3 caractere
+   Pentru cei care au Windows, vom ignora extensiile: '.dll', '.mui', '.cat', '.sys', '.inf' si '.exe'
+   Graficul se va afisa la consola ca un chart cu bare orizontale orientate dreapta->stanga, folosind caracterul '#'
+   Dimensiunea maxima a graficului pe X va fi 80, iar frecventele trebuie scalate procentual astfel incat daca frecventa maxima este 400, atunci la consola vom vedea o linia cu 80 de caractere '#', iar daca este 200, atunci vor fi 40 de caractere
+   
+Punctaj:
+	- [10p] filtrarea corecta a extensiilor
+	- [5p]  scanarea fisierelor din folderul precizat
+	- [10p] calcularea frecventelor extensiilor
+	- [5p]  tratarea eventualelor erori	
+	- [10p] generarea liniilor graficului, aliniat sa corespunda procentual cu dimensiunea x=80
+	- [10p] afisarea inversata a graficului, liniile incep la dreapta si continua spre stanga, in capat avem extensia
+	- [2p]  Scriptul ruleaza corect si are o functie principala numita main()
+   
+Pentru "C:\Windows\System32", trebuie sa obtineti un grafic de forma:     
+
+                                                       ######################### .png
+                                                                              ## .tlb
+                                                                   ############# .dat
+                                                                ################ .ini
+                                                        ######################## .xml
+                                                                           ##### .chm
+                                                                             ### .cpl
+       ######################################################################### .bin
+                                                                        ######## .msc
+                                                                          ###### .otp
+                                                                         ####### .txt
+                                                        ######################## .nls
+################################################################################ .mof
+                                          ###################################### .pnf
+                                                                              ## .cab
+                            #################################################### .amp
+                                                  ############################## .dsp
+                            #################################################### .nrm
+                   ############################################################# .phm
+                                                           ##################### .eth
+                                                           ##################### .hsc
+                                                             ################### .gpd
+                                                                          ###### .gdl
+                                                                              ## .hlp
+                                                                              ## .ntf
+                            #################################################### .man
+                                                                              ## .xsl
+                                                                             ### .rtf
+                                               ################################# .mfl
+                                                                              ## .vbs
+                                                                             ### .pol
+                                                                              ## .ps1
+                                                                              ## .etl
+                                                               ################# .pak
+                                                                      ########## .xsd 
